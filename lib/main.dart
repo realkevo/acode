@@ -124,48 +124,7 @@ class Nyumbani extends StatelessWidget {
     );
 
 
-    /*Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
 
-              Contacts(),
-              Header(),
-
-              Expanded(
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-
-
-
-
-                  decoration: BoxDecoration(
-
-                    color: Colors.transparent,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: <Widget>[
-                            AboutUs(),
-                            SizedBox(height: 5,),
-                            OurServices(),
-                            SizedBox(height: 5,),
-                            Description(),
-                            SizedBox(height: 5,),
-
-
-
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-              ),
-
-              Links(),
-            ],
-          );*/
 
 
 
@@ -177,338 +136,764 @@ class Nyumbani extends StatelessWidget {
 class Testa extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     // TODO: implement build
 return
+ SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Container(
+
+        //Root Container
+        decoration: BoxDecoration(
+
+            image: DecorationImage(
+                image: AssetImage(
+                  "assets/acode.jpg",
+
+                  //'https://d2gg9evh47fn9z.
+                  // cloudfront.net/800px_COLOURBOX18042265.jpg',
+                ),
+
+                fit: BoxFit.fill)
+        ),
+
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: 8.0, right: 8.0, bottom: 3.0, top: 4),
+          //this is root column
+          child: Column(
+            //this is root column
+            children: [
+
+
+
+              //header container
+              Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Container(
+
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(5),
+
+                  ),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Container(
+                    
+                          child: Column(
+                              children: < Widget>[
+                    
+                                Text("Nairobi, Kenya",
+                                  style:
+                                  TextStyle(
+                                    fontSize: 12,
+                                    decoration: TextDecoration.none,
+                                    color: Colors.white,
+                    
+                                  )
+                                  ,),
+                    
+                                SizedBox(height: 10,),
+                                Text("Acodedevelopers100@gmail.com",
+                                  style:      TextStyle(
+                                    fontSize: 11,
+                                    decoration: TextDecoration.none,
+                    
+                                    fontStyle: FontStyle.normal,
+                                    color: Colors.white,
+                    
+                                  ),),
+                    
+                              ]
+                    
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 58.0),
+                          child: Container(
+                            child: Column(
+                              children: <Widget>[
+                                Text("AC0DE",
+                                  style:
+                                  TextStyle(
+                                    fontSize: 38,
+                                    decoration: TextDecoration.none,
+                    
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.lightGreenAccent,
+                    
+                                  ),),
+                                SizedBox(height: 10,),
+                    
+                                Text("Deploying "
+                                    "Robust, Readable Code",
+                                  style:TextStyle(
+                                    fontSize: 13,
+                                    decoration: TextDecoration.none,
+                    
+                                    color: Colors.white,
+                    
+                                  ),),
+                    
+                    
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                    
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                    
+                    
+                    
+                    
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                    
+                                  children: <Widget>[
+                                    Container(
+                                      width: 12,
+                                      child:  Transform.scale(
+                                          scale: 2,
+                                          child:
+                                          Image.asset('assets/githublogo.png')),
+                                    ),
+                    
+                                    SizedBox(width: 20,),
+                    
+                    
+                                    Container(
+                                      width: 10,
+                                      child: Transform.scale(
+                                          scale: 2,
+                                          child:
+                                          Image.asset('assets/linkedinlogo.png')),
+                                    ),
+                    
+                                  ],
+                                ),
+                    
+                    
+                              ),
+                              SizedBox(height: 20,),
+                    
+                              FlutterTimeDemo(),
+                            ],),
+                        )
+                    
+                    
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              //header container
+
+
+
+
+
+
+
+
+
+              SizedBox(height: 5,),
+              Expanded(
+                child: Container(
+                  color: Colors.transparent,
+
+                  child: Center(
+                    child: SingleChildScrollView(
+                      child: Center(
+                        child: Column(
+                          children: <Widget>[
+
+                            Column(
+                              children: [
+
+                                // Text("Email or whatsapp us",
+                                //  style: TextStyle(
+                                //    fontSize: 12,
+                                //   color: Colors.yellow,
+                                //  fontWeight: FontWeight.normal),),
+                                Container(
+                                  color: Colors.transparent,
+
+                                  child:   Center(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        Text(
+                                          'About Us',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              decoration: TextDecoration.none,
+
+                                              color: Colors.deepOrange,
+                                              fontWeight: FontWeight.normal),),
+                                        SizedBox(height: 10,),
+
+                                        Center(
+                                          child: Text(
+                                            'Entrusted in Building \n\n'
+                                                'and Deploying, \n\nsecure Robust readable code'
+                                                '\n\nUsing futuristic, Frameworks \n\nand Development Tools.'
+                                            ,
+                                            style: TextStyle(
+                                                decoration: TextDecoration.none,
+
+                                                fontSize: 12,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.normal),
+                                          ),
+                                        ),
+
+
+
+
+
+                                      ],),
+                                  ),
+                                ),
+                                SizedBox(height: 20,),
+                                Container(
+                                  child: Row(
+                                    mainAxisSize:MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        height: 16,
+                                        child: Transform.scale(
+                                            scale: 1,
+                                            child:
+                                            Image.asset('assets/whatapp.png')),
+                                      ),
+                                      SizedBox(width: 70,),
+                                      Text("<<< WHATSAPP OR EMAIL US >>>",
+                                        style: TextStyle(
+                                            decoration: TextDecoration.none,
+
+                                            fontSize: 12,
+                                            color: Colors.green,
+                                            fontWeight: FontWeight.normal),
+                                      ),
+                                      SizedBox(width: 70,),
+
+                                      Container(
+                                        height: 20,
+                                        child: Transform.scale(
+                                            scale: 1,
+                                            child:
+                                            Image.asset('assets/gg.png')
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                ),
+
+                              ],
+                            ),
+                            SizedBox(height: 20,),
+
+                            Container(
+                              color: Colors.transparent,
+                              child: Center(
+                                child: Column(
+                                  children: <Widget>[
+                                    Text(
+                                      'Our Services',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          decoration: TextDecoration.none,
+
+                                          color: Colors.deepOrange,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+
+
+                                    Center(
+
+                                      child: Text(
+                                        'Android Development\n\nIos Development'
+                                            '\n\nWeb Development '
+                                            '\n \nWeb design \n \nData BackUp and Retrieval'
+                                            '\n\nNetwork Audit and Pentesting',
+                                        style: TextStyle(
+                                            decoration: TextDecoration.none,
+
+                                            fontSize: 11,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.normal),
+                                      ),
+
+                                    ),
+
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 10,),
+
+                            Container(
+                              color: Colors.transparent,
+                              child: Column(
+                                children: <Widget>[
+                                  Text(
+                                    'Tools and Frameworks',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        decoration: TextDecoration.none,
+
+                                        color: Colors.deepOrange,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Center(
+                                    child: Column(
+
+                                      children: <Widget>[
+                                        Center(
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(left: 68.0),
+                                            child: Text(
+                                              'Flutter and Dart Programming Language \n\n Android Studio'
+                                                  '\n\nGit, Github \n\n'
+                                                  ''
+                                                  ' Python and Django \n\n'
+                                                  ''
+                                                  ' Kotlin, JetPack Compose CrossPlatform'
+                                                  '\n\n'
+                                                  ''
+                                                  'Figma\n\n'
+                                                  ' Firebase/GCP/AWS\n\n'
+                                                  'Docker, Kubernattes',
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  decoration: TextDecoration.none,
+
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 10,),
+
+
+
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+      ),
+
+
+);
   //Root Container
 
-   Container(
+   SingleChildScrollView(
+     scrollDirection: Axis.horizontal,
+     child: Container(
 
-     //Root Container
-     decoration: BoxDecoration(
+       //Root Container
+       decoration: BoxDecoration(
 
-         image: DecorationImage(
-             image: AssetImage(
-               "assets/acode.jpg",
+           image: DecorationImage(
+               image: AssetImage(
+                 "assets/acode.jpg",
 
-               //'https://d2gg9evh47fn9z.
-               // cloudfront.net/800px_COLOURBOX18042265.jpg',
-             ),
+                 //'https://d2gg9evh47fn9z.
+                 // cloudfront.net/800px_COLOURBOX18042265.jpg',
+               ),
 
-             fit: BoxFit.fill)
-     ),
+               fit: BoxFit.fill)
+       ),
 
-     child: Padding(
-       padding: const EdgeInsets.only(
-           left: 8.0, right: 8.0, bottom: 3.0, top: 4),
-       //this is root column
-       child: Column(
+       child: Padding(
+         padding: const EdgeInsets.only(
+             left: 8.0, right: 8.0, bottom: 3.0, top: 4),
          //this is root column
-         children: [
+         child: Column(
+           //this is root column
+           children: [
 
 
 
-           //header container
-           Container(
-             width: MediaQuery.of(context).size.width,
-               decoration: BoxDecoration(
-                 color: Colors.transparent,
-                 borderRadius: BorderRadius.circular(5),
+             //header container
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Container(
 
-               ),
-               child: Row(
-                 mainAxisSize: MainAxisSize.max,
-                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                 children: <Widget>[
-                   Container(
-                     child: Column(
-                         children: < Widget>[
-                           Text("Acodedevelopers100@gmail.com",
-                             style:      TextStyle(
-                               fontSize: 14,
-                               fontStyle: FontStyle.italic,
-                               color: Colors.white,
+                 width: MediaQuery.of(context).size.width,
+                   decoration: BoxDecoration(
+                     color: Colors.transparent,
+                     borderRadius: BorderRadius.circular(5),
 
-                             ),),
-                           Text("Mlolongo, Kenya",
-                             style:
-                             TextStyle(
-                               fontSize: 10,
-                               color: Colors.white,
-
-                             )
-                             ,),
-
-                         ]
-
-                     ),
                    ),
-                   Container(
-                     child: Column(
-                       children: <Widget>[
-                         Text("WELOME TO ACE CODE",
-                           style:
-                           TextStyle(
-                             fontSize: 16,
-                             fontWeight: FontWeight.bold,
-                             color: Colors.white,
-
-                           ),),
-                         Text("Deploying "
-                             "Robust, Readable Code",
-                           style:TextStyle(
-                             fontSize: 13,
-                             color: Colors.white,
-
-                           ),),
-
-
-                       ],
-                     ),
-                   ),
-                   Container(
-
-                     child: Column(
-                       children: <Widget>[
-                         Container(
-
-                           child: Row(
-                             children: <Widget>[
-                               Container(
-                                 width: 40,
-                                 height: 30,
-                                 child:  Transform.scale(
-                                     scale: 1,
-                                     child:
-                                     Image.asset('assets/githublogo.png')),
-                               ),
-
-                               Container(
-                                 width: 40,
-                                   height: 23,
-                                   child: Transform.scale(
-                                     scale: 1,
-                                     child:
-                                     Image.asset('assets/linkedinlogo.png')),
-                               ),
-                             ],
-                           ),
-                         ),
-                         FlutterTimeDemo(),
-                       ],),
-                   )
-
-
-                 ],
-               ),
-             ),
-           //header container
-
-
-
-
-
-
-
-
-
-SizedBox(height: 5,),
-           Expanded(
-             child: Container(
-               color: Colors.transparent,
-
-             child: Center(
-               child: SingleChildScrollView(
-                 child: Center(
-                   child: Column(
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                      children: <Widget>[
-
-                       Column(
-                         children: [
-
-                           // Text("Email or whatsapp us",
-                           //  style: TextStyle(
-                           //    fontSize: 12,
-                           //   color: Colors.yellow,
-                           //  fontWeight: FontWeight.normal),),
-                           Container(
-                             color: Colors.transparent,
-
-                             child:   Center(
-                               child: Column(
-                                 mainAxisSize: MainAxisSize.min,
-                                 children: <Widget>[
-                                   Text(
-                                     'About Us',
-                                     style: TextStyle(
-                                         fontSize: 20,
-                                         color: Colors.deepOrange,
-                                         fontWeight: FontWeight.normal),),
-                                   SizedBox(height: 10,),
-
-                                   Center(
-                                     child: Text(
-                                       'Entrusted in Building \n\n'
-                                           'and Deploying, \n\nsecure Robust readable code'
-                                           '\n\nUsing futuristic, Frameworks \n\nand Development Tools'
-                                       ,
-                                       style: TextStyle(
-                                           fontSize: 12,
-                                           color: Colors.white,
-                                           fontWeight: FontWeight.normal),
-                                     ),
-                                   ),
-
-
-
-
-
-                                 ],),
-                             ),
-                           ),
-                           SizedBox(height: 20,),
-                           Container(
-                             child: Row(
-                               mainAxisSize:MainAxisSize.min,
-                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                               children: [
-                                 Container(
-                                   height: 16,
-                                   child: Transform.scale(
-                                       scale: 1,
-                                       child:
-                                       Image.asset('assets/whatapp.png')),
-                                 ),
-                                SizedBox(width: 90,),
-                                 Text("<<<< EMAIL OR WHATSAPP US >>>",
-                                   style: TextStyle(
-                                       fontSize: 12,
-                                       color: Colors.green,
-                                       fontWeight: FontWeight.normal),
-                                 ),
-                                 SizedBox(width: 90,),
-
-                                 Container(
-                                   height: 20,
-                                   child: Transform.scale(
-                                       scale: 1,
-                                       child:
-                                       Image.asset('assets/gg.png')
-                                   ),
-                                 ),
-
-                               ],
-                             ),
-                           ),
-
-                         ],
-                       ),
-                       SizedBox(height: 20,),
-
                        Container(
-                         color: Colors.transparent,
-                         child: Center(
+
+                         child: Column(
+                             children: < Widget>[
+
+                               Text("Nairobi, Kenya",
+                                 style:
+                                 TextStyle(
+                                   fontSize: 12,
+                                   decoration: TextDecoration.none,
+                                   color: Colors.white,
+
+                                 )
+                                 ,),
+
+                               SizedBox(height: 10,),
+                               Text("Acodedevelopers100@gmail.com",
+                                 style:      TextStyle(
+                                   fontSize: 11,
+                                   decoration: TextDecoration.none,
+
+                                   fontStyle: FontStyle.normal,
+                                   color: Colors.white,
+
+                                 ),),
+
+                             ]
+
+                         ),
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.only(left: 58.0),
+                         child: Container(
                            child: Column(
                              children: <Widget>[
-                               Text(
-                                 'Our Services',
-                                 style: TextStyle(
-                                     fontSize: 20,
-                                     color: Colors.deepOrange,
-                                     fontWeight: FontWeight.normal),
-                               ),
-                               SizedBox(
-                                 height: 10,
-                               ),
+                               Text("AC0DE",
+                                 style:
+                                 TextStyle(
+                                   fontSize: 38,
+                                   decoration: TextDecoration.none,
 
+                                   fontWeight: FontWeight.bold,
+                                   color: Colors.lightGreenAccent,
 
-                               Center(
+                                 ),),
+                               SizedBox(height: 10,),
 
-                                 child: Text(
-                                   'Android Development\n\nIos Development'
-                                       '\n\nWeb Development '
-                                       '\n \nWeb design \n \nData BackUp and Retrieval'
-                                       '\n\nNetwork Audit and Pentesting',
-                                   style: TextStyle(
-                                       fontSize: 11,
-                                       color: Colors.white,
-                                       fontWeight: FontWeight.normal),
-                                 ),
+                               Text("Deploying "
+                                   "Robust, Readable Code",
+                                 style:TextStyle(
+                                   fontSize: 13,
+                                   decoration: TextDecoration.none,
 
-                               ),
+                                   color: Colors.white,
+
+                                 ),),
 
 
                              ],
                            ),
                          ),
                        ),
-                       SizedBox(height: 10,),
-
+                       SizedBox(width: 10,),
                        Container(
-                         color: Colors.transparent,
+
                          child: Column(
                            children: <Widget>[
-                             Text(
-                               'Tools and Frameworks',
-                               style: TextStyle(
-                                   fontSize: 20,
-                                   color: Colors.deepOrange,
-                                   fontWeight: FontWeight.normal),
-                             ),
-                             SizedBox(
-                               height: 20,
-                             ),
-                             Center(
-                               child: Column(
-                                 
-                                 children: <Widget>[
-                                   Center(
-                                     child: Padding(
-                                       padding: const EdgeInsets.only(left: 68.0),
-                                       child: Text(
-                                         'Flutter n Dart \n\n Android Studio'
-                                             '\n\nGit, Github \n\n'
-                                             ''
-                                             ' Python and Django \n\n'
-                                             ''
-                                             ' Kotlin, JetPack Compose CrossPlatform'
-                                             '\n\n'
-                                             ''
-                                             'Figma \n\n'
-                                             ''
-                                             ' Firebase/GCP/AWS\n\n'
-                                             'Docker n Kubernattes',
-                                         style: TextStyle(
-                                             fontSize: 12,
-                                             color: Colors.white,
-                                             fontWeight: FontWeight.normal),
-                                       ),
-                                     ),
+                             Container(
+
+
+
+
+                                   child: Row(
+                                     mainAxisSize: MainAxisSize.min,
+
+                                       children: <Widget>[
+                                    Container(
+                                           width: 12,
+                                           child:  Transform.scale(
+                                               scale: 2,
+                                               child:
+                                               Image.asset('assets/githublogo.png')),
+                                         ),
+
+                                       SizedBox(width: 20,),
+
+
+                                       Container(
+                                           width: 10,
+                                             child: Transform.scale(
+                                               scale: 2,
+                                               child:
+                                               Image.asset('assets/linkedinlogo.png')),
+                                         ),
+
+                                     ],
                                    ),
-                                 ],
-                               ),
+
+
                              ),
-                           ],
-                         ),
-                       ),
-                       SizedBox(height: 10,),
+                             SizedBox(height: 10,),
 
-
+                             FlutterTimeDemo(),
+                           ],),
+                       )
 
 
                      ],
                    ),
                  ),
+             ),
+             //header container
+
+
+
+
+
+
+
+
+
+     SizedBox(height: 5,),
+             Expanded(
+               child: Container(
+                 color: Colors.transparent,
+
+               child: Center(
+                 child: SingleChildScrollView(
+                   child: Center(
+                     child: Column(
+                       children: <Widget>[
+
+                         Column(
+                           children: [
+
+                             // Text("Email or whatsapp us",
+                             //  style: TextStyle(
+                             //    fontSize: 12,
+                             //   color: Colors.yellow,
+                             //  fontWeight: FontWeight.normal),),
+                             Container(
+                               color: Colors.transparent,
+
+                               child:   Center(
+                                 child: Column(
+                                   mainAxisSize: MainAxisSize.min,
+                                   children: <Widget>[
+                                     Text(
+                                       'About Us',
+                                       style: TextStyle(
+                                           fontSize: 20,
+                                           decoration: TextDecoration.none,
+
+                                           color: Colors.deepOrange,
+                                           fontWeight: FontWeight.normal),),
+                                     SizedBox(height: 10,),
+
+                                     Center(
+                                       child: Text(
+                                         'Entrusted in Building \n\n'
+                                             'and Deploying, \n\nsecure Robust readable code'
+                                             '\n\nUsing futuristic, Frameworks \n\nand Development Tools'
+                                         ,
+                                         style: TextStyle(
+                                             decoration: TextDecoration.none,
+
+                                             fontSize: 12,
+                                             color: Colors.white,
+                                             fontWeight: FontWeight.normal),
+                                       ),
+                                     ),
+
+
+
+
+
+                                   ],),
+                               ),
+                             ),
+                             SizedBox(height: 20,),
+                             Container(
+                               child: Row(
+                                 mainAxisSize:MainAxisSize.min,
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                   Container(
+                                     height: 16,
+                                     child: Transform.scale(
+                                         scale: 1,
+                                         child:
+                                         Image.asset('assets/whatapp.png')),
+                                   ),
+                                  SizedBox(width: 90,),
+                                   Text("<<< WHATSAPP OR EMAIL US >>>",
+                                     style: TextStyle(
+                                         decoration: TextDecoration.none,
+
+                                         fontSize: 12,
+                                         color: Colors.green,
+                                         fontWeight: FontWeight.normal),
+                                   ),
+                                   SizedBox(width: 90,),
+
+                                   Container(
+                                     height: 20,
+                                     child: Transform.scale(
+                                         scale: 1,
+                                         child:
+                                         Image.asset('assets/gg.png')
+                                     ),
+                                   ),
+
+                                 ],
+                               ),
+                             ),
+
+                           ],
+                         ),
+                         SizedBox(height: 20,),
+
+                         Container(
+                           color: Colors.transparent,
+                           child: Center(
+                             child: Column(
+                               children: <Widget>[
+                                 Text(
+                                   'Our Services',
+                                   style: TextStyle(
+                                       fontSize: 20,
+                                       decoration: TextDecoration.none,
+
+                                       color: Colors.deepOrange,
+                                       fontWeight: FontWeight.normal),
+                                 ),
+                                 SizedBox(
+                                   height: 10,
+                                 ),
+
+
+                                 Center(
+
+                                   child: Text(
+                                     'Android Development\n\nIos Development'
+                                         '\n\nWeb Development '
+                                         '\n \nWeb design \n \nData BackUp and Retrieval'
+                                         '\n\nNetwork Audit and Pentesting',
+                                     style: TextStyle(
+                                         decoration: TextDecoration.none,
+
+                                         fontSize: 11,
+                                         color: Colors.white,
+                                         fontWeight: FontWeight.normal),
+                                   ),
+
+                                 ),
+
+
+                               ],
+                             ),
+                           ),
+                         ),
+                         SizedBox(height: 10,),
+
+                         Container(
+                           color: Colors.transparent,
+                           child: Column(
+                             children: <Widget>[
+                               Text(
+                                 'Tools and Frameworks',
+                                 style: TextStyle(
+                                     fontSize: 20,
+                                     decoration: TextDecoration.none,
+
+                                     color: Colors.deepOrange,
+                                     fontWeight: FontWeight.normal),
+                               ),
+                               SizedBox(
+                                 height: 20,
+                               ),
+                               Center(
+                                 child: Column(
+
+                                   children: <Widget>[
+                                     Center(
+                                       child: Padding(
+                                         padding: const EdgeInsets.only(left: 68.0),
+                                         child: Text(
+                                           'Flutter n Dart \n\n Android Studio'
+                                               '\n\nGit, Github \n\n'
+                                               ''
+                                               ' Python and Django \n\n'
+                                               ''
+                                               ' Kotlin, JetPack Compose CrossPlatform'
+                                               '\n\n'
+                                               ''
+                                               'Figma \n\n'
+                                               ''
+                                               ' Firebase/GCP/AWS\n\n'
+                                               'Docker n Kubernattes',
+                                           style: TextStyle(
+                                               fontSize: 12,
+                                               decoration: TextDecoration.none,
+
+                                               color: Colors.white,
+                                               fontWeight: FontWeight.normal),
+                                         ),
+                                       ),
+                                     ),
+                                   ],
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+                         SizedBox(height: 10,),
+
+
+
+
+                       ],
+                     ),
+                   ),
+                 ),
+               ),
                ),
              ),
-             ),
-           ),
-         ],
+           ],
+         ),
        ),
-     ),
 
+     ),
    );
 
 
@@ -557,10 +942,13 @@ class _FlutterTimeDemoState extends State<FlutterTimeDemo>
           ),*/
         ),
 
-        child: Text(_timeString,style: TextStyle(
+        child: Text(_timeString,style:
+        TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 14,
-          color: Colors.white,
+          decoration: TextDecoration.none,
+
+          color: Colors.lightGreenAccent,
         ),
           ),
       ),

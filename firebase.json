@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site" : "acodec",
     "source": ".",
     "ignore": [
       "firebase.json",
