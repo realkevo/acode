@@ -1,15 +1,18 @@
 import 'package:acoder/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Header extends StatelessWidget{
+  final String url = "https://github.com/realkevo";
+  final linkedUrl = "https://www.linkedin.com/in/kelvin-thuranira-485844231/";
   @override
   Widget build(BuildContext context) {
-    final windowSize = MediaQuery.sizeOf(context);
+    final windowSize = MediaQuery.sizeOf(context).width;
     // TODO: implement build
 return Container(
 
-  width: windowSize.width,
+  width: windowSize,
   decoration: BoxDecoration(
     color: Colors.transparent,
     borderRadius: BorderRadius.circular(5),
@@ -99,21 +102,49 @@ return Container(
                     children: <Widget>[
                       Container(
                         width: 12,
-                        child:  Transform.scale(
-                            scale: 2,
-                            child:
-                            Image.asset('assets/githublogo.png')),
+                        child:  GestureDetector(
+                          child: Transform.scale(
+                              scale: 2,
+                              child:
+                              Image.asset('assets/githublogo.png')),
+
+                        onTap: () async {
+                            if (await  canLaunchUrl(Uri.parse(url))){
+                              await launchUrl(Uri.parse(url),
+                              mode:
+                              LaunchMode.externalApplication,
+                              //browse in browser)
+
+                              );
+                            }
+                            else throw 'oops! try again later';
+                          }
+                        ,),
                       ),
       
                       SizedBox(width: 20,),
       
       
-                      Container(
-                        width: 10,
-                        child: Transform.scale(
-                            scale: 2,
-                            child:
-                            Image.asset('assets/linkedinlogo.png')),
+                      GestureDetector(
+                        child: Container(
+
+                          width: 10,
+                          child: Transform.scale(
+                              scale: 2,
+                              child:
+                              Image.asset('assets/linkedinlogo.png')),
+                        ),
+                          onTap: () async {
+                            if (await  canLaunchUrl(Uri.parse(linkedUrl))){
+                              await launchUrl(Uri.parse(linkedUrl),
+                                mode:
+                                LaunchMode.externalApplication,
+                                //browse in browser)
+
+                              );
+                            }
+                            else throw 'oops! try again later';
+                          }
                       ),
       
                     ],

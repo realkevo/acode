@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:acoder/creation.dart';
 import 'package:acoder/heda.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 //import 'package:intl/intl.dart';
 //import  'package:intl/date_symbol_data_local.dart';
 
@@ -16,6 +17,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -54,6 +56,26 @@ class MyApp extends StatelessWidget {
 }
 
 class Testa extends StatelessWidget{
+  final whatsAppUrl = "https://wa.me/+254758536280";
+  final String email = "acodedevelopers100@gmail.com";
+  final String subject = "hello";
+  final String body = "Service inquiry";
+
+  void _sendMail() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+      query: 'subject=$subject&body=$body',
+
+    );
+    if ( await
+    canLaunchUrl(emailUri)){
+      await launchUrl(emailUri);}
+    else{
+      throw 'could not load to mail';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -168,12 +190,26 @@ return
                                     mainAxisSize:MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Container(
-                                        height: 16,
-                                        child: Transform.scale(
-                                            scale: 1,
-                                            child:
-                                            Image.asset('assets/whatapp.png')),
+                                      GestureDetector(
+                                        child: Container(
+                                          height: 16,
+                                          child: Transform.scale(
+                                              scale: 1,
+                                              child:
+                                              Image.asset('assets/whatapp.png')),
+                                        ),
+                                          onTap: () async {
+                                            if (await  canLaunchUrl(Uri.parse(whatsAppUrl))){
+                                              await launchUrl(Uri.parse(whatsAppUrl),
+                                                mode:
+                                                LaunchMode.externalApplication,
+                                                //browse in browser)
+
+                                              );
+                                            }
+                                            else throw 'oops! try again later';
+                                          }
+
                                       ),
                                       SizedBox(width: 70,),
                                       Text("<<< WHATSAPP OR EMAIL US >>>",
@@ -186,13 +222,16 @@ return
                                       ),
                                       SizedBox(width: 70,),
 
-                                      Container(
-                                        height: 20,
-                                        child: Transform.scale(
-                                            scale: 1,
-                                            child:
-                                            Image.asset('assets/gg.png')
+                                      GestureDetector(
+                                        child: Container(
+                                          height: 20,
+                                          child: Transform.scale(
+                                              scale: 1,
+                                              child:
+                                              Image.asset('assets/gg.png')
+                                          ),
                                         ),
+                                        onTap: _sendMail,
                                       ),
 
                                     ],
