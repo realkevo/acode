@@ -57,156 +57,161 @@ class MyMobileBody extends StatelessWidget {
                       //header container
                       Padding(
                         padding: const EdgeInsets.all(3.0),
+                        //header container
                         child:   Container(
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child:
-                            Container(
-
-                              height: 100,
-                              width: currentWith,
-                              color: Colors.transparent,
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Container(
-                                      child:
-                                      Column(
-                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                        children: <Widget>[
-                                          Text("Nairobi, Kenya",
-                                            style:
-                                            TextStyle(
-                                              fontSize: 12,
-                                              decoration: TextDecoration.none,
-                                              color: Colors.white,
-
-                                            )
-                                            ,),
-
-                                          GestureDetector(
-                                            onTap: _sendMail,
-                                            child: Text("Acodedevelopers100@gmail.com",
-                                              style:      TextStyle(
-                                                fontSize: 10,
-                                                decoration: TextDecoration.none,
-
-                                                fontStyle: FontStyle.normal,
-                                                color: Colors.lightGreenAccent,
-
-                                              ),),
+                            SingleChildScrollView(
+                              child: Container(
+                              
+                                height: 100,
+                                width: currentWith,
+                                color: Colors.transparent,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: SingleChildScrollView(
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Container(
+                                          child:
+                                          Column(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: <Widget>[
+                                              Text("Nairobi, Kenya",
+                                                style:
+                                                TextStyle(
+                                                  fontSize: 10,
+                                                  decoration: TextDecoration.none,
+                                                  color: Colors.white,
+                                                                  
+                                                )
+                                                ,),
+                                                                  
+                                              GestureDetector(
+                                                onTap: _sendMail,
+                                                child: Text("Acodedevelopers100@gmail.com",
+                                                  style:      TextStyle(
+                                                    fontSize: 10,
+                                                    decoration: TextDecoration.none,
+                                                                  
+                                                    fontStyle: FontStyle.normal,
+                                                    color: Colors.lightGreenAccent,
+                                                                  
+                                                  ),),
+                                              ),
+                                                                  
+                                                                  
+                                            ],
                                           ),
-
-
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(width: 5,),
-                                    Container(
-
-                                      child:  Column(
-                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                        children: <Widget>[
-                                          Text("AC0DE",
-                                            style:
-                                            TextStyle(
-                                              fontSize: 16,
-                                              decoration: TextDecoration.none,
-
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.lightGreenAccent,
-
-                                            ),),
-
-
-                                          Text("Deploying "
-                                              "Robust, Readable Code",
-                                            style:TextStyle(
-                                              fontSize: 10,
-                                              decoration: TextDecoration.none,
-
-                                              color: Colors.white,
-
-                                            ),),
-
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(width: 5,),
-
-                                    Container(
-
-
-                                      child:  Padding(
-                                        padding: const EdgeInsets.all(4.0),
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                          children: <Widget>[
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                        ),
+                                        SizedBox(width: 2,),
+                                        Container(
+                                                                  
+                                          child:  Column(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: <Widget>[
+                                              Text("AC0DE",
+                                                style:
+                                                TextStyle(
+                                                  fontSize: 16,
+                                                  decoration: TextDecoration.none,
+                                                                  
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.lightGreenAccent,
+                                                                  
+                                                ),),
+                                                                  
+                                                                  
+                                              Text("Deploying "
+                                                  "Robust, Readable Code",
+                                                style:TextStyle(
+                                                  fontSize: 8,
+                                                  decoration: TextDecoration.none,
+                                                                  
+                                                  color: Colors.white,
+                                                                  
+                                                ),),
+                                                                  
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(width: 2,),
+                                                                  
+                                        Container(
+                                                                  
+                                                                  
+                                          child:  Padding(
+                                            padding: const EdgeInsets.all(4.0),
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                               children: <Widget>[
-                                                Container(
-                                                  width: 17,
-                                                  child: GestureDetector(
-                                                    child: Transform.scale(
-                                                        scale: 2.2,
-                                                        child:
-                                                        Image.asset('assets/githublogo.png')),
-
-                                                    onTap: () async {
-                                                      if (await  canLaunchUrl(Uri.parse(url))){
-                                                        await launchUrl(Uri.parse(url),
-                                                          mode:
-                                                          LaunchMode.externalApplication,
-                                                          //browse in browser)
-
-                                                        );
-                                                      }
-                                                      else throw 'oops! try again later';
-                                                    }
-                                                    ,),
-                                                ),
-                                                SizedBox(width: 30,),
-                                                Container(
-                                                  width: 14,
-
-
-                                                  child: GestureDetector(
-                                                      child: Container(
-
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                  children: <Widget>[
+                                                    Container(
+                                                      width: 17,
+                                                      child: GestureDetector(
                                                         child: Transform.scale(
-                                                            scale: 2,
+                                                            scale: 2.2,
                                                             child:
-                                                            Image.asset('assets/linkedinlogo.png')),
-                                                      ),
-                                                      onTap: () async {
-                                                        if (await  canLaunchUrl(Uri.parse(linkedUrl))){
-                                                          await launchUrl(Uri.parse(linkedUrl),
-                                                            mode:
-                                                            LaunchMode.externalApplication,
-                                                            //browse in browser)
-
-                                                          );
+                                                            Image.asset('assets/githublogo.png')),
+                                                                  
+                                                        onTap: () async {
+                                                          if (await  canLaunchUrl(Uri.parse(url))){
+                                                            await launchUrl(Uri.parse(url),
+                                                              mode:
+                                                              LaunchMode.externalApplication,
+                                                              //browse in browser)
+                                                                  
+                                                            );
+                                                          }
+                                                          else throw 'oops! try again later';
                                                         }
-                                                        else throw 'oops! try again later';
-                                                      }
-                                                  ),
+                                                        ,),
+                                                    ),
+                                                    SizedBox(width: 2,),
+                                                    Container(
+                                                      width: 14,
+                                                                  
+                                                                  
+                                                      child: GestureDetector(
+                                                          child: Container(
+                                                                  
+                                                            child: Transform.scale(
+                                                                scale: 2,
+                                                                child:
+                                                                Image.asset('assets/linkedinlogo.png')),
+                                                          ),
+                                                          onTap: () async {
+                                                            if (await  canLaunchUrl(Uri.parse(linkedUrl))){
+                                                              await launchUrl(Uri.parse(linkedUrl),
+                                                                mode:
+                                                                LaunchMode.externalApplication,
+                                                                //browse in browser)
+                                                                  
+                                                              );
+                                                            }
+                                                            else throw 'oops! try again later';
+                                                          }
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
+                                                FlutterTimeDemo(),
+                                                                  
+                                                                  
+                                                                  
                                               ],
                                             ),
-                                            FlutterTimeDemo(),
-
-
-
-                                          ],
+                                          ),
                                         ),
-                                      ),
+                                                                  
+                                      ],
+                                                                  
                                     ),
-
-                                  ],
-
+                                  ),
                                 ),
                               ),
                             ),

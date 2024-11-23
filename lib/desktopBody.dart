@@ -131,7 +131,7 @@ class MyDesktopbody extends StatelessWidget{
                                           children: [
                                             GestureDetector(
                                                 child: Container(
-                                                  height: 16,
+                                                  height: 45,
                                                   child: Transform.scale(
                                                       scale: 1,
                                                       child:
@@ -163,7 +163,7 @@ class MyDesktopbody extends StatelessWidget{
 
                                             GestureDetector(
                                               child: Container(
-                                                height: 20,
+                                                height: 45,
                                                 child: Transform.scale(
                                                     scale: 1,
                                                     child:

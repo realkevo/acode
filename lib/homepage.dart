@@ -1,5 +1,6 @@
 import 'package:acoder/desktopBody.dart';
 import 'package:acoder/mobileBody.dart';
+import 'package:acoder/update.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
 return
   Scaffold(
     // backgroundColor: currentWidth < 600 ? Colors.lightGreenAccent : Colors.deepOrange,
-    body: ResponsiveLayout(mobileBody: MyMobileBody(),
+    body: ResponsiveLayout(mobileBody: const Update(),
       desktopBody: MyDesktopbody(),
     ),
 
