@@ -54,163 +54,169 @@ class MyMobileBody extends StatelessWidget {
 
                   Container(
                     height: 50,
-                    child:  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        Container(
-                          color: Colors.black,
-
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text("Nairobi, Kenya",
-                                  style:
-                                  TextStyle(
-                                    fontSize: 12,
-                                    decoration: TextDecoration.none,
-                                    color: Colors.white,
-
-                                  )
-                                  ,),
-                                GestureDetector(
-                                  onTap: _sendMail,
-                                  child: Text("Acodedevelopers100@gmail.com",
-                                    style:      TextStyle(
-                                      fontSize: 10,
+                    child:  SingleChildScrollView(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Container(
+                            color: Colors.black,
+                      
+                            child: Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text("Nairobi, Kenya",
+                                    style:
+                                    TextStyle(
+                                      fontSize: 12,
                                       decoration: TextDecoration.none,
+                                      color: Colors.white,
+                      
+                                    )
+                                    ,),
+                                  GestureDetector(
+                                    onTap: _sendMail,
+                                    child: Text("Acodedevelopers100@gmail.com",
+                                      style:      TextStyle(
+                                        fontSize: 10,
+                                        decoration: TextDecoration.none,
+                      
+                                        fontStyle: FontStyle.normal,
+                                        color: Colors.lightGreenAccent,
+                      
+                                      ),),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                      
+                          Container(
+                            color: Colors.black,
+                      
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 5.0, right: 5, top: 2.0, bottom: 2.0),
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(right:
+                                    40.0),
+                                    child: Text("AC0DE",
+                                      style:
+                                      TextStyle(
+                                        fontSize: 20,
+                                        decoration: TextDecoration.none,
 
-                                      fontStyle: FontStyle.normal,
-                                      color: Colors.lightGreenAccent,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.lightGreenAccent,
 
+                                      ),),
+                                  ),
+                      
+                      
+                                  Text("Deploying "
+                                      "Robust, Readable Code",
+                                    style:TextStyle(
+                                      fontSize: 11,
+                                      decoration: TextDecoration.none,
+                      
+                                      color: Colors.white,
+                      
                                     ),),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
+                      
                           ),
-                        ),
-
-                        Container(
-                          color: Colors.black,
-
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Column(
-                              children: [
-                                Text("AC0DE",
-                                  style:
-                                  TextStyle(
-                                    fontSize: 18,
-                                    decoration: TextDecoration.none,
-
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.lightGreenAccent,
-
-                                  ),),
-
-
-                                Text("Deploying "
-                                    "Robust, Readable Code",
-                                  style:TextStyle(
-                                    fontSize: 11,
-                                    decoration: TextDecoration.none,
-
-                                    color: Colors.white,
-
-                                  ),),
-                              ],
-                            ),
-                          ),
-
-                        ),
-                        Container(
-                          color: Colors.black,
-
-                          child: Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-
-
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 13),
-                                    child: SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-
-                                          //icons row here
-
-                                          Container(
-                                            width: 17,
-                                            child: GestureDetector(
-                                              child: Transform.scale(
-                                                  scale: 2.2,
-                                                  child:
-                                                  Image.asset('assets/githublogo.png')),
-
-                                              onTap: () async {
-                                                if (await  canLaunchUrl(Uri.parse(url))){
-                                                  await launchUrl(Uri.parse(url),
-                                                    mode:
-                                                    LaunchMode.externalApplication,
-                                                    //browse in browser)
-
-                                                  );
-                                                }
-                                                else throw 'oops! try again later';
-                                              }
-                                              ,),
-                                          ),
-                                          SizedBox(width: 15,),
-                                          Container(
-                                            width: 20,
-                                            height: 11,
-
-
-                                            child: GestureDetector(
-                                                child: Container(
-
-                                                  child: Transform.scale(
-                                                      scale: 2,
-                                                      child:
-                                                      Image.asset('assets/linkedinlogo.png')),
-                                                ),
+                          Container(
+                            color: Colors.black,
+                      
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Container(
+                      
+                      
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(left: 13),
+                                      child: SingleChildScrollView(
+                                        scrollDirection: Axis.horizontal,
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                      
+                                            //icons row here
+                      
+                                            Container(
+                                              width: 17,
+                                              child: GestureDetector(
+                                                child: Transform.scale(
+                                                    scale: 2.2,
+                                                    child:
+                                                    Image.asset('assets/githublogo.png')),
+                      
                                                 onTap: () async {
-                                                  if (await  canLaunchUrl(Uri.parse(linkedUrl))){
-                                                    await launchUrl(Uri.parse(linkedUrl),
+                                                  if (await  canLaunchUrl(Uri.parse(url))){
+                                                    await launchUrl(Uri.parse(url),
                                                       mode:
                                                       LaunchMode.externalApplication,
                                                       //browse in browser)
-
+                      
                                                     );
                                                   }
                                                   else throw 'oops! try again later';
                                                 }
+                                                ,),
                                             ),
-                                          ),
-
-                                        ],),
+                                            SizedBox(width: 15,),
+                                            Container(
+                                              width: 20,
+                                              height: 11,
+                      
+                      
+                                              child: GestureDetector(
+                                                  child: Container(
+                      
+                                                    child: Transform.scale(
+                                                        scale: 2,
+                                                        child:
+                                                        Image.asset('assets/linkedinlogo.png')),
+                                                  ),
+                                                  onTap: () async {
+                                                    if (await  canLaunchUrl(Uri.parse(linkedUrl))){
+                                                      await launchUrl(Uri.parse(linkedUrl),
+                                                        mode:
+                                                        LaunchMode.externalApplication,
+                                                        //browse in browser)
+                      
+                                                      );
+                                                    }
+                                                    else throw 'oops! try again later';
+                                                  }
+                                              ),
+                                            ),
+                      
+                                          ],),
+                                      ),
                                     ),
+                                    color: Colors.white,
+                                    height: 23.2,
+                                    width:  115,
                                   ),
-                                  color: Colors.white,
-                                  height: 23.2,
-                                  width:  115,
-                                ),
-
-                                FlutterTimeDemo(),
-                              ],
+                      
+                                  FlutterTimeDemo(),
+                                ],
+                              ),
                             ),
+                      
+                      
                           ),
-
-
-                        ),
-
-                      ],
+                      
+                        ],
+                      ),
                     ),
                   ),
 
@@ -261,17 +267,20 @@ class MyMobileBody extends StatelessWidget {
                                             SizedBox(height: 10,),
 
                                             Center(
-                                              child: Text(
-                                                'Entrusted in Building \n\n'
-                                                    'and Deploying, \n\nsecure Robust readable code'
-                                                    '\n\nUsing futuristic, Frameworks \n\nand Development Tools.'
-                                                ,
-                                                style: TextStyle(
-                                                    decoration: TextDecoration.none,
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(left: 30.0),
+                                                child: Text(
+                                                  'Entrusted in Building \n\n'
+                                                      'and Deploying, \n\nsecure Robust readable code'
+                                                      '\n\nUsing futuristic, Frameworks \n\nand Development Tools.'
+                                                  ,
+                                                  style: TextStyle(
+                                                      decoration: TextDecoration.none,
 
-                                                    fontSize: 12,
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.normal),
+                                                      fontSize: 12,
+                                                      color: Colors.white,
+                                                      fontWeight: FontWeight.normal),
+                                                ),
                                               ),
                                             ),
 
@@ -361,17 +370,20 @@ class MyMobileBody extends StatelessWidget {
 
                                         Center(
 
-                                          child: Text(
-                                            'Android Development\n\nIos Development'
-                                                '\n\nWeb Development '
-                                                '\n \nWeb design \n \nData BackUp and Retrieval'
-                                                '\n\nNetwork Audit and Pentesting',
-                                            style: TextStyle(
-                                                decoration: TextDecoration.none,
-
-                                                fontSize: 11,
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.normal),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(left: 30),
+                                            child: Text(
+                                              'Android Development\n\nIos Development'
+                                                  '\n\nWeb Development '
+                                                  '\n \nWeb design \n \nData BackUp and Retrieval'
+                                                  '\n\nNetwork Audit and Pentesting',
+                                              style: TextStyle(
+                                                  decoration: TextDecoration.none,
+                                            
+                                                  fontSize: 11,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.normal),
+                                            ),
                                           ),
 
                                         ),
@@ -403,9 +415,8 @@ class MyMobileBody extends StatelessWidget {
                                         child: Column(
 
                                           children: <Widget>[
-                                            Center(
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(left: 68.0),
+                                             Padding(
+                                                padding: const EdgeInsets.only(left: 95.0),
                                                 child: Text(
                                                   'Flutter and Dart Programming Language \n\n Android Studio'
                                                       '\n\nGit, Github \n\n'
@@ -426,7 +437,7 @@ class MyMobileBody extends StatelessWidget {
                                                       fontWeight: FontWeight.normal),
                                                 ),
                                               ),
-                                            ),
+
                                           ],
                                         ),
                                       ),
