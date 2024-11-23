@@ -198,7 +198,7 @@ class MyMobileBody extends StatelessWidget {
                                     ),
                                   ),
                                   color: Colors.white,
-                                  height: 23,
+                                  height: 23.2,
                                   width:  115,
                                 ),
 
