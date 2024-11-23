@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
 return
   Scaffold(
     // backgroundColor: currentWidth < 600 ? Colors.lightGreenAccent : Colors.deepOrange,
-    body: ResponsiveLayout(mobileBody: const Update(),
+    body: ResponsiveLayout(mobileBody: MyMobileBody(),
       desktopBody: MyDesktopbody(),
     ),
 

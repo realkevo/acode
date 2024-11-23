@@ -19,7 +19,7 @@ class Update extends StatelessWidget {
                     "is currently under maintainance\n"
                     " \n"
                     "Desktop version is up\n"
-                    "Visit from desktop or Set \n"
+                    "Visit from desktop or Try Set \n"
                     "Phone orientation=LANDSCAPE"
                     "\n")
               ],

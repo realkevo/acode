@@ -173,6 +173,15 @@ return Container(
                 ),
                 SizedBox(height: 20,),
 
+Text("TIME, FREE LIMITED RESOURCE",
+    style:TextStyle(
+    fontSize: 7,
+    decoration: TextDecoration.none,
+    fontStyle: FontStyle.normal,
+
+    color: Colors.white,
+
+    ),),
                 FlutterTimeDemo(),
               ],),
           )
