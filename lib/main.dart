@@ -2,9 +2,11 @@
 
 import 'dart:async';
 
+import 'package:acoder/admin/uploadserviceui.dart';
 import 'package:acoder/heda.dart';
 import 'package:acoder/homepage.dart';
 import 'package:acoder/mobileBody.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 //import 'package:intl/intl.dart';
@@ -13,7 +15,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 //import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.
+  ensureInitialized();
+
+    Firebase.initializeApp(
+   );
   runApp(const MyApp());
 }
 
@@ -46,7 +53,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: UploadService(),
       //Testa(),
   //    Creation(),
 
